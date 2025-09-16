@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Usuario } from '../../model/usuario.model';
+import { Usuario } from '../model/usuario.model';
 
 
 @Component({
