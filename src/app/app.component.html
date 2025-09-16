@@ -1,0 +1,7 @@
+<app-lista-usuarios
+  (usuarioSeleccionado)="onUsuarioSeleccionado($event)">
+</app-lista-usuarios>
+
+<app-detalle-usuario
+  [usuario]="usuarioSeleccionado">
+</app-detalle-usuario>
