@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { DetalleUsuarioComponent } from './componentes/detalle-usuario/detalle-usuario.component';
 import { ListaUsuariosComponent } from './componentes/lista-usuarios/lista-usuarios.component';
-import { Usuario } from './model/usuario.model';
+import { Usuario } from './componentes/model/usuario.model';
 
 @Component({
   selector: 'app-root',
@@ -17,7 +17,7 @@ import { Usuario } from './model/usuario.model';
   template: `
     <h1>Gestión de Usuarios</h1>
 
-    <app-lista-usuarios>
+   s <app-lista-usuarios>
     </app-lista-usuarios>
 
     <app-detalle-usuario

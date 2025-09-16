@@ -1,0 +1,57 @@
+<table class="usuarios-table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Username</th>
+      <th>Email</th>
+      <th>Acciones</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let usuario of usuarios">
+      <td>{{ usuario.id }}</td>
+      <td>{{ usuario.name }}</td>
+      <td>{{ usuario.username }}</td>
+      <td>{{ usuario.email }}</td>
+      <td>
+        <button (click)="verDetalle(usuario)">Ver detalle</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+<!-- Modal dentro del mismo componente -->
+<div class="modal" *ngIf="usuarioSeleccionado">
+  <div class="modal-content">
+    <span class="close" (click)="cerrarModal()">&times;</span>
+    <h2>Detalle de Usuario</h2>
+
+
+    <div class="detalle-seccion">
+      <h3>Información Personal</h3>
+      <p><strong>Nombre:</strong> {{ usuarioSeleccionado.name }}</p>
+      <p><strong>Username:</strong> {{ usuarioSeleccionado.username }}</p>
+      <p><strong>Email:</strong> {{ usuarioSeleccionado.email }}</p>
+      <p><strong>Teléfono:</strong> {{ usuarioSeleccionado.phone }}</p>
+    </div>
+
+
+    <div class="detalle-seccion">
+      <h3>Dirección</h3>
+      <p>{{ usuarioSeleccionado.address.street }}, {{ usuarioSeleccionado.address.suite }}</p>
+      <p>{{ usuarioSeleccionado.address.city }} - {{ usuarioSeleccionado.address.zipcode }}</p>
+    </div>
+
+
+    <div class="detalle-seccion">
+      <h3>Compañía</h3>
+      <p><strong>Nombre:</strong> {{ usuarioSeleccionado.company.name }}</p>
+      <p><strong>Lema:</strong> {{ usuarioSeleccionado.company.catchPhrase }}</p>
+    </div>
+  </div>
+</div>
+
+
+

@@ -1,0 +1,25 @@
+.detalle-usuario {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #f9fafb;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+
+.detalle-usuario h3 {
+  text-align: center;
+  color: #1e40af;
+  margin-bottom: 15px;
+}
+
+
+.detalle-usuario p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #111827;
+}
+
+
+
