@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { UsuarioService } from '../../servicios/usuario.service';
 import { Usuario } from '../model/usuario.model';
 
-
 @Component({
   selector: 'app-lista-usuarios',
   standalone: true,
@@ -15,9 +14,7 @@ export class ListaUsuariosComponent implements OnInit {
   usuarios: Usuario[] = [];
   usuarioSeleccionado?: Usuario;
 
-
   constructor(private usuarioService: UsuarioService) {}
-
 
   ngOnInit() {
     this.usuarioService.getUsuarios().subscribe({
@@ -26,16 +23,11 @@ export class ListaUsuariosComponent implements OnInit {
     });
   }
 
-
   verDetalle(usuario: Usuario) {
     this.usuarioSeleccionado = usuario; // abre el modal
   }
-
 
   cerrarModal() {
     this.usuarioSeleccionado = undefined; // cierra el modal
   }
 }
-
-
-

@@ -21,13 +21,11 @@
   </tbody>
 </table>
 
-
 <!-- Modal dentro del mismo componente -->
 <div class="modal" *ngIf="usuarioSeleccionado">
   <div class="modal-content">
     <span class="close" (click)="cerrarModal()">&times;</span>
     <h2>Detalle de Usuario</h2>
-
 
     <div class="detalle-seccion">
       <h3>Información Personal</h3>
@@ -37,13 +35,11 @@
       <p><strong>Teléfono:</strong> {{ usuarioSeleccionado.phone }}</p>
     </div>
 
-
     <div class="detalle-seccion">
       <h3>Dirección</h3>
       <p>{{ usuarioSeleccionado.address.street }}, {{ usuarioSeleccionado.address.suite }}</p>
       <p>{{ usuarioSeleccionado.address.city }} - {{ usuarioSeleccionado.address.zipcode }}</p>
     </div>
-
 
     <div class="detalle-seccion">
       <h3>Compañía</h3>
@@ -52,6 +48,4 @@
     </div>
   </div>
 </div>
-
-
-
+  
