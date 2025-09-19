@@ -1,3 +1,15 @@
+<form (ngSubmit)="crearUsuario()" #usuarioForm="ngForm" class="form-agregar">
+  <input type="text" name="name" [(ngModel)]="nuevoUsuario.name" placeholder="Nombre" required>
+  <input type="text" name="username" [(ngModel)]="nuevoUsuario.username" placeholder="Username" required>
+  <input type="email" name="email" [(ngModel)]="nuevoUsuario.email" placeholder="Email" required>
+  <button type="submit">Agregar Usuario</button>
+</form>
+
+
+
+
+
+
 <table class="usuarios-table">
   <thead>
     <tr>
@@ -46,6 +58,6 @@
       <p><strong>Nombre:</strong> {{ usuarioSeleccionado.company.name }}</p>
       <p><strong>Lema:</strong> {{ usuarioSeleccionado.company.catchPhrase }}</p>
     </div>
+    
   </div>
 </div>
-  

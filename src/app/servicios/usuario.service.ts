@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Usuario } from '../componentes/model/usuario.model';
+import { Usuario, UsuarioCreate } from '../componentes/model/usuario.model';
 
 @Injectable({
   providedIn: 'root'
@@ -18,4 +18,9 @@ private apiUrl = 'https://jsonplaceholder.typicode.com/users';
   {
     return this.http.get<Usuario[]>(this.apiUrl);
   }
+  
+  crearUsuario(usuario: UsuarioCreate):Observable<Usuario>{
+    return this.http.post<Usuario>(this.apiUrl,usuario);
+  }
+
 }

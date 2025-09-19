@@ -20,6 +20,7 @@ export interface Company {
 }
 
 
+// Usuario completo (GET)
 export interface Usuario {
   id: number;
   name: string;
@@ -30,6 +31,20 @@ export interface Usuario {
   website: string;
   company: Company;
 }
+
+
+// Usuario para crear (POST)
+export interface UsuarioCreate {
+  name: string;
+  username: string;
+  email: string;
+  address?: Address;
+  phone?: string;
+  website?: string;
+  company?: Company;
+}
+
+
 
 
 
