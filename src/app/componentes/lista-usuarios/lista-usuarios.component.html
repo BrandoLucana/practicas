@@ -37,6 +37,11 @@
 <div class="modal" *ngIf="usuarioSeleccionado">
   <div class="modal-content">
     <span class="close" (click)="cerrarModal()">&times;</span>
+    
+    <div class="user-avatar">
+      <img [src]="'https://i.pravatar.cc/100?u=' + usuarioSeleccionado.email" alt="Avatar" class="avatar">
+    </div>
+    
     <h2>Detalle de Usuario</h2>
 
     <div class="detalle-seccion">
@@ -48,16 +53,37 @@
     </div>
 
     <div class="detalle-seccion">
-      <h3>Dirección</h3>
-      <p>{{ usuarioSeleccionado.address.street }}, {{ usuarioSeleccionado.address.suite }}</p>
-      <p>{{ usuarioSeleccionado.address.city }} - {{ usuarioSeleccionado.address.zipcode }}</p>
+      <h3>Dirección Completa</h3>
+      <p><strong>Calle:</strong> {{ usuarioSeleccionado.address.street }}</p>
+      <p><strong>Suite:</strong> {{ usuarioSeleccionado.address.suite }}</p>
+      <p><strong>Ciudad:</strong> {{ usuarioSeleccionado.address.city }}</p>
+      <p><strong>Código Postal:</strong> {{ usuarioSeleccionado.address.zipcode }}</p>
     </div>
 
     <div class="detalle-seccion">
-      <h3>Compañía</h3>
-      <p><strong>Nombre:</strong> {{ usuarioSeleccionado.company.name }}</p>
-      <p><strong>Lema:</strong> {{ usuarioSeleccionado.company.catchPhrase }}</p>
+      <h3>Ubicación Geográfica</h3>
+      <p><strong>Latitud:</strong> {{ usuarioSeleccionado.address.geo.lat }}</p>
+      <p><strong>Longitud:</strong> {{ usuarioSeleccionado.address.geo.lng }}</p>
     </div>
-    
+
+    <div class="detalle-seccion">
+      <h3>Empresa</h3>
+      <p><strong>Nombre:</strong> {{ usuarioSeleccionado.company.name }}</p>
+      <p><strong>Eslogan:</strong> {{ usuarioSeleccionado.company.catchPhrase }}</p>
+      <p><strong>Negocio:</strong> {{ usuarioSeleccionado.company.bs }}</p>
+    </div>
+
+    <div class="detalle-seccion">
+      <h3>Sitio Web</h3>
+      <p>
+        <a [href]="'https://' + usuarioSeleccionado.website" 
+           target="_blank" 
+           class="website-link">
+          {{ usuarioSeleccionado.website }}
+        </a>
+      </p>
+    </div>
+
+    <button class="close-button" (click)="cerrarModal()">Cerrar</button>
   </div>
 </div>

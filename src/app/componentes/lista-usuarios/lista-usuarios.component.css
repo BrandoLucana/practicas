@@ -15,7 +15,7 @@
 
 
 .usuarios-table th {
-  background-color: #1e40af;
+  background-color: #259f15;
   color: white;
 }
 
@@ -31,7 +31,7 @@
 
 
 button {
-  background-color: #1e40af;
+  background-color: #259f15;
   color: white;
   border: none;
   padding: 6px 12px;
@@ -41,7 +41,7 @@ button {
 
 
 button:hover {
-  background-color: #4338ca;
+  background-color: #259f15;
 }
 
 
@@ -78,11 +78,11 @@ button:hover {
   font-size: 24px;
   font-weight: bold;
   cursor: pointer;
-  color: #1e40af;
+  color: #259f15;
 }
 .modal-content h2 {
   text-align: center;
-  color: #1e40af;
+  color: #259f15;
   margin-bottom: 15px;
 }
 
@@ -137,4 +137,84 @@ button:hover {
 }
 .form-agregar button:hover{
  background-color: #4338ca;
+}
+
+/*agregado*/
+
+/* Estilos mejorados para el modal */
+.user-avatar {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 3px solid #259f15;
+}
+
+.website-link {
+  color: #1e40af;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.website-link:hover {
+  text-decoration: underline;
+  color: #4338ca;
+}
+
+.close-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #259f15;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 15px;
+}
+
+.close-button:hover {
+  background-color: #4338ca;
+}
+
+/* Mejora el diseño de las secciones */
+.detalle-seccion {
+  margin-bottom: 15px;
+  padding: 12px;
+  border-left: 4px solid #3be732;
+  background-color: #f0f4ff;
+  border-radius: 6px;
+}
+
+.detalle-seccion h3 {
+  margin-top: 0;
+  color: #1e3a8a;
+  font-size: 16px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #d1d5db;
+  padding-bottom: 5px;
+}
+
+.detalle-seccion p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #111827;
+}
+
+/* Mejora el modal general */
+.modal-content {
+  background-color: #f9fafb;
+  padding: 25px;
+  border-radius: 12px;
+  width: 500px;
+  max-width: 90%;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  position: relative;
+  max-height: 80vh;
+  overflow-y: auto;
 }
